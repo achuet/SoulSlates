@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #050714;
+  --color-brand-card: rgba(20, 15, 50, 0.4);
+}
+
+body {
+  /* Deep glowing background mimicking the reference image */
+  background: radial-gradient(circle at 20% 30%, #2a0845 0%, #0b0f24 40%, #050714 100%);
+  background-attachment: fixed;
+  color: white;
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: rgba(30, 20, 70, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(209, 0, 255, 0.5);
+  box-shadow: 0 0 30px rgba(142, 45, 226, 0.4);
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #4a00e0 0%, #d100ff 100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(209, 0, 255, 0.4);
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(209, 0, 255, 0.7);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.text-neon-cyan {
+  color: #00d2ff;
+  text-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+}
+
+/* Flying / Floating Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.delay-2000 {
+  animation-delay: 2s;
+}
+
+.delay-4000 {
+  animation-delay: 4s;
+}
